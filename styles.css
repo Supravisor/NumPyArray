@@ -41,6 +41,10 @@ td {
   padding-left: 5vw;
 }
 
+#empty {
+  width: 45vw;
+}
+
 /* buttons */
 
 .btn {

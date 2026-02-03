@@ -26,3 +26,15 @@ const copy = (arg) => {
      document.editor.textbox.value+= "\n" + array.value + " = np." + arg + "(" + variable.value + ")";
   }
 }
+
+const access = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else if (Math.abs(Number(variable.value[0])) >= 0) {
+      return alert("Please do not start with a number in the 'variable' field.");
+  } else if (index.value == "") {
+      return alert("Please enter a number in the 'index' field.")
+  } else {
+      document.editor.textbox.value+= "\n" + variable.value + "[" + index.value + "]";
+  }
+}

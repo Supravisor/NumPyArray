@@ -11,6 +11,10 @@ h1 {
 
 /* table */
 
+table {
+  margin: auto;
+}
+
 td {
   vertical-align: top;
 }

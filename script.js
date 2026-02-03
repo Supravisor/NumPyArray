@@ -2,6 +2,7 @@
 // basic NumPy arrays
 let array = document.getElementById("array");
 let variable = document.getElementById("variable");
+let index = document.getElementById("index");
 
 const np = () => {
   if (array.value === "") {

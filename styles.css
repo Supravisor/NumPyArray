@@ -9,6 +9,12 @@ h1 {
   text-align: center;
 }
 
+/* table */
+
+#buttons, #preview {
+  width: 38vw;
+}
+
 /* buttons */
 
 .btn {

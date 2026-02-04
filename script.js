@@ -5,6 +5,7 @@ let variable = document.getElementById("variable");
 let index = document.getElementById("index");
 let start = document.getElementById("start");
 let end = document.getElementById("end");
+let step = document.getElementById("step");
 
 const np = () => {
   if (array.value === "") {

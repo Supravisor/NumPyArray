@@ -54,3 +54,16 @@ const range = () => {
       document.editor.textbox.value+= "\n" + variable.value + "[" + start.value + ":" + end.value + ":" + step.value + "]";
   }
 }
+
+// Array Types
+const dtype = (type) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else if (!type) {
+      document.editor.textbox.value+= "\n" + variable.value + ".dtype";
+  } else if (array.value === "") {
+      return alert("Please enter a comma separated array in the 'array' field.");
+  } else {
+      document.editor.textbox.value+= "\n" + variable.value + " = np.array([" + array.value + "], dtype=np." + type + ")";
+  }
+}

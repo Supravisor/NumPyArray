@@ -3,6 +3,7 @@
 let array = document.getElementById("array");
 let variable = document.getElementById("variable");
 let index = document.getElementById("index");
+let start = document.getElementById("start");
 
 const np = () => {
   if (array.value === "") {

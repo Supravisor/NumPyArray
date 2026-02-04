@@ -4,6 +4,7 @@ let array = document.getElementById("array");
 let variable = document.getElementById("variable");
 let index = document.getElementById("index");
 let start = document.getElementById("start");
+let end = document.getElementById("end");
 
 const np = () => {
   if (array.value === "") {

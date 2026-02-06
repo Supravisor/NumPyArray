@@ -72,6 +72,10 @@ td {
   background: #646464;
 }
 
+.btn-success, .btn-data {
+  color: white;
+}
+
 /* input */
 
 input {

@@ -84,3 +84,16 @@ const memorySize = () => {
       document.editor.textbox.value+="\nprint('%d bytes' % (" + variable.value + ".size * " + variable.value + ".itemsize))";
   }
 }
+
+// Indexing and slicing of matrices
+const accessMatrix = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else if (Math.abs(Number(variable.value)) >= 0) {
+      return alert("Please do not enter a number in the 'variable' field.");
+  } else if (indexMatrix.value == "") {
+      return alert("Please enter a number in the 'index' field.")
+  } else {
+      document.editor.textbox.value+= "\n" + variable.value + "[" + indexMatrix.value + "]";
+  }
+}

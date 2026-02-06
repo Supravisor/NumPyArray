@@ -68,6 +68,14 @@ td {
   border-color: #398439;
 }
 
+.btn-data {
+  background: #646464;
+}
+
+.btn-success, .btn-data {
+  color: white;
+}
+
 /* input */
 
 input {

@@ -1,5 +1,5 @@
 
-// basic NumPy arrays
+// Basic NumPy arrays
 let array = document.getElementById("array");
 let variable = document.getElementById("variable");
 let index = document.getElementById("index");
@@ -55,7 +55,7 @@ const range = () => {
   }
 }
 
-// Array Types
+// Array types
 const dtype = (type) => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field.");
@@ -65,5 +65,14 @@ const dtype = (type) => {
       return alert("Please enter a comma separated array in the 'array' field.");
   } else {
       document.editor.textbox.value+= "\n" + variable.value + " = np.array([" + array.value + "], dtype=np." + type + ")";
+  }
+}
+
+// Dimensions and shapes
+const dimensionShape = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + "." + arg;
   }
 }

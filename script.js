@@ -76,3 +76,11 @@ const dimensionShape = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + "." + arg;
   }
 }
+
+const memorySize = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else {
+      document.editor.textbox.value+="\nprint('%d bytes' % (" + variable.value + ".size * " + variable.value + ".itemsize))";
+  }
+}

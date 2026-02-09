@@ -88,6 +88,7 @@ const memorySize = () => {
 // Indexing and slicing of matrices
 let indexMatrix = document.getElementById("indexMatrix");
 let subIndexMatrix = document.getElementById("subIndexMatrix");
+let start1Matrix = document.getElementById("start1Matrix");
 
 const accessMatrix = () => {
   if (variable.value === "") {

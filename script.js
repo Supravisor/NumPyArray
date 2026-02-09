@@ -86,6 +86,9 @@ const memorySize = () => {
 }
 
 // Indexing and slicing of matrices
+let indexMatrix = document.getElementById("indexMatrix");
+let subIndexMatrix = document.getElementById("subIndexMatrix");
+
 const accessMatrix = () => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field.");
@@ -95,5 +98,37 @@ const accessMatrix = () => {
       return alert("Please enter a number in the 'index' field.")
   } else {
       document.editor.textbox.value+= "\n" + variable.value + "[" + indexMatrix.value + "]";
+  }
+}
+
+const accessSubMatrix = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else if (Math.abs(Number(variable.value)) >= 0) {
+      return alert("Please do not enter a number in the 'variable' field.");
+  } else if (indexMatrix.value === "") {
+      return alert("Please enter a number in the 'index' field.")
+  } else if (subIndexMatrix.value === "") {
+      return alert("Please enter a number in the 'sub index' field.")
+  } else {
+      document.editor.textbox.value+= "\n" + variable.value + "[" + indexMatrix.value + ", " + subIndexMatrix.value + "]";
+  }
+}
+
+const accessMiddleMatrix = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else if (Math.abs(Number(variable.value)) >= 0) {
+      return alert("Please do not enter a number in the 'variable' field.");
+  } else if (start1Matrix.value === "") {
+      return alert("Please enter a number in the 'start 1' field.")
+  } else if (end1Matrix.value === "") {
+      return alert("Please enter a number in the 'end 1' field.")
+  } else if (start2Matrix.value === "") {
+      return alert("Please enter a number in the 'start 2' field.")
+  } else if (end2Matrix.value === "") {
+      return alert("Please enter a number in the 'end 2' field.")
+  } else {
+      document.editor.textbox.value+= "\n" + variable.value + "[" + start1Matrix.value + ":" + end1Matrix.value + ", " + start2Matrix.value + ":" + end2Matrix.value + "]";
   }
 }

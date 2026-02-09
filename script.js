@@ -86,6 +86,8 @@ const memorySize = () => {
 }
 
 // Indexing and slicing of matrices
+let indexMatrix = document.getElementById("indexMatrix");
+
 const accessMatrix = () => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field.");

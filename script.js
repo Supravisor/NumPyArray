@@ -93,6 +93,7 @@ let end1Matrix = document.getElementById("end1Matrix");
 let start2Matrix = document.getElementById("start2Matrix");
 let end2Matrix = document.getElementById("end2Matrix");
 let startMatrix = document.getElementById("startMatrix");
+let endMatrix = document.getElementById("endMatrix");
 
 const accessMatrix = () => {
   if (variable.value === "") {

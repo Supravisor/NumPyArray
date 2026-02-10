@@ -185,3 +185,17 @@ const rangeMatrixOdd = () => {
       document.editor.textbox.value+= "\n" + variable.value + "[::2]";
   }
 }
+
+const assignArray = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else if (Math.abs(Number(variable.value)) >= 0) {
+      return alert("Please do not enter a number in the 'variable' field.");
+  } else if (array.value === '') {
+      return alert("Please enter a comma separated array in the 'array' field.");
+  } else if (indexMatrix.value == "") {
+      return alert("Please enter a number in the 'index' field.")
+  } else {
+      document.editor.textbox.value+= "\n" + variable.value + "[" + indexMatrix.value + "] = np.array([" + array.value.replaceAll(",", ", ").split(",") + "])";
+  }
+}

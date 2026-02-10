@@ -146,3 +146,19 @@ const rangeMatrix = () => {
       document.editor.textbox.value+= "\n" + variable.value + "[" + startMatrix.value + ":" + endMatrix.value + "]";
   }
 }
+
+const sliceMatrix = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else if (Math.abs(Number(variable.value)) >= 0) {
+      return alert("Please do not enter a number in the 'variable' field.");
+  } else if (startMatrix.value === "" && endMatrix.value) {
+      if (endMatrix.value && beforeMatrix.value) {
+        document.editor.textbox.value+= "\n" + variable.value + "[" + endMatrix.value + ":, " + beforeMatrix.value + ":]";
+      } else {
+          document.editor.textbox.value+= "\n" + variable.value + "[" + endMatrix.value + ":, " + beforeMatrix.value + ":]";
+      }
+  } else if (startMatrix.value && endMatrix.value) {
+      document.editor.textbox.value+= "\n" + variable.value + "[:" + startMatrix.value + ", :" + endMatrix.value + "]";
+  }
+}

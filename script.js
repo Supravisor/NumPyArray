@@ -165,3 +165,13 @@ const sliceMatrix = () => {
       document.editor.textbox.value+= "\n" + variable.value + "[:" + startMatrix.value + ", :" + endMatrix.value + "]";
   }
 }
+
+const rangeMatrixReverse = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else if (Math.abs(Number(variable.value)) >= 0) {
+      return alert("Please do not enter a number in the 'variable' field.");
+  } else {
+      document.editor.textbox.value+= "\n" + variable.value + "[::-1]";
+  }
+}

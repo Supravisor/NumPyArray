@@ -96,3 +96,7 @@ input[type="number"] {
 input:not([type:"button"]) {
   border-color: black;
 }
+
+#subIndexMatrix {
+  width: 80px;
+}

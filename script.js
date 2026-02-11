@@ -211,7 +211,7 @@ const assignValue = () => {
   } else if (indexMatrix.value == "") {
       return alert("Please enter a number in the 'index' field, in the 'Indexing and slicing of matrices' section.");
   } else {
-      document.editor.textbox.value+= "\n" + variable.value + "[" + indexMatrix.value + "] = " + array.value.replaceAll(regex, ", ");
+      document.editor.textbox.value+= "\n" + variable.value + "[" + indexMatrix.value + "] = " + array.value;
   }
 }
 
@@ -227,6 +227,6 @@ const assignSubMatrixValue = () => {
   } else if (endMatrix.value === "") {
       return alert("Please enter a number in the 'end' field, in the 'Indexing and slicing of matrices' section.");
   } else {
-      document.editor.textbox.value+= "\n" + variable.value + "[" + startMatrix.value + ", " + endMatrix.value + "] = " + array.value.replaceAll(regex, ", ");
+      document.editor.textbox.value+= "\n" + variable.value + "[" + startMatrix.value + ", " + endMatrix.value + "] = " + array.value;
   }
 }

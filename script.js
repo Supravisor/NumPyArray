@@ -230,3 +230,15 @@ const assignSubMatrixValue = () => {
       document.editor.textbox.value+= "\n" + variable.value + "[" + startMatrix.value + ", " + endMatrix.value + "] = " + array.value;
   }
 }
+
+// Summary statistics
+const statistics = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (!axis.value) {
+      document.editor.textbox.value+="\n" + variable.value + "." + arg + "()";
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + "." + arg + "(axis=" + axis.value + ")";
+  }
+}
+

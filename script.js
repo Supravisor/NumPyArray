@@ -1,6 +1,7 @@
 
 // Basic NumPy arrays
 let array = document.getElementById("array");
+let regex = /\s*,\s*/g;
 let variable = document.getElementById("variable");
 let index = document.getElementById("index");
 let start = document.getElementById("start");
@@ -11,11 +12,11 @@ const np = () => {
   if (array.value === "") {
       return alert("Please enter a comma separated array in the 'array' field, in the 'Basic NumPy arrays' section.");
   } else if (variable.value === "") {
-     document.editor.textbox.value+= "\nnp.array([" + array.value.replaceAll(",", ", ").split(",") + "])";
+     document.editor.textbox.value+= "\nnp.array([" + array.value.replaceAll(regex, ", ").split(",") + "])";
   } else if (Math.abs(Number(variable.value[0])) >= 0) {
       return alert("Please do not start with a number in the 'variable' field, in the 'Basic NumPy arrays' section.");
   } else {
-     document.editor.textbox.value+= "\n" + variable.value + " = np.array([" + array.value.replaceAll(",", ", ").split(",") + "])";
+      document.editor.textbox.value+= "\n" + variable.value + " = np.array([" + array.value.replaceAll(regex, ", ").split(",") + "])";
   }
 }
 
@@ -27,7 +28,7 @@ const copy = (arg) => {
   } else if (Math.abs(Number(variable.value[0])) >= 0) {
       return alert("Please do not start with a number in the 'variable' field, in the 'Basic NumPy arrays' section.");
   } else {
-     document.editor.textbox.value+= "\n" + array.value + " = np." + arg + "(" + variable.value + ")";
+     document.editor.textbox.value+= "\n" + array.value.replaceAll(regex, ", ") + " = np." + arg + "(" + variable.value + ")";
   }
 }
 
@@ -64,7 +65,7 @@ const dtype = (type) => {
   } else if (array.value === "") {
       return alert("Please enter a comma separated array in the 'array' field, in the 'Basic NumPy arrays' section.");
   } else {
-      document.editor.textbox.value+= "\n" + variable.value + " = np.array([" + array.value + "], dtype=np." + type + ")";
+      document.editor.textbox.value+= "\n" + variable.value + " = np.array([" + array.value.replaceAll(regex, ", ") + "], dtype=np." + type + ")";
   }
 }
 
@@ -196,7 +197,7 @@ const assignArray = () => {
   } else if (indexMatrix.value == "") {
       return alert("Please enter a number in the 'index' field, in the 'Indexing and slicing of matrices' section.");
   } else {
-      document.editor.textbox.value+= "\n" + variable.value + "[" + indexMatrix.value + "] = np.array([" + array.value.replaceAll(",", ", ").split(",") + "])";
+      document.editor.textbox.value+= "\n" + variable.value + "[" + indexMatrix.value + "] = np.array([" + array.value.replaceAll(regex, ", ").split(",") + "])";
   }
 }
 
@@ -210,6 +211,22 @@ const assignValue = () => {
   } else if (indexMatrix.value == "") {
       return alert("Please enter a number in the 'index' field, in the 'Indexing and slicing of matrices' section.");
   } else {
-      document.editor.textbox.value+= "\n" + variable.value + "[" + indexMatrix.value + "] = " + array.value;
+      document.editor.textbox.value+= "\n" + variable.value + "[" + indexMatrix.value + "] = " + array.value.replaceAll(regex, ", ");
+  }
+}
+
+const assignSubMatrixValue = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (Math.abs(Number(variable.value)) >= 0) {
+      return alert("Please do not enter a number in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (array.value === '') {
+      return alert("Please enter a value in the 'array' field, in the 'Basic NumPy arrays' section.");
+  } else if (startMatrix.value === "") {
+      return alert("Please enter a number in the 'start' field, in the 'Indexing and slicing of matrices' section.");
+  } else if (endMatrix.value === "") {
+      return alert("Please enter a number in the 'end' field, in the 'Indexing and slicing of matrices' section.");
+  } else {
+      document.editor.textbox.value+= "\n" + variable.value + "[" + startMatrix.value + ", " + endMatrix.value + "] = " + array.value.replaceAll(regex, ", ");
   }
 }

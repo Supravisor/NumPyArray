@@ -232,6 +232,8 @@ const assignSubMatrixValue = () => {
 }
 
 // Summary statistics
+let axis = document.getElementById("axis");
+
 const statistics = (arg) => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");

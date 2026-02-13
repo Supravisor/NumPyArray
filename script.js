@@ -251,10 +251,20 @@ const broadcast = () => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
   } else if (broadcastNumber.value === "") {
-      return alert("Please enter a number in the 'value' field below, in the 'Broadcasting and vectorised operations' section.");
+      return alert("Please enter a number in the 'value' field, in the 'Broadcasting and vectorised operations' section.");
   } else if (!(Math.abs(Number(broadcastNumber.value)) >= 0) || broadcastNumber.value === "") {
-      return alert("Please enter a number in the 'value' field below, in the 'Broadcasting and vectorised operations' section.");
+      return alert("Please enter a number in the 'value' field, in the 'Broadcasting and vectorised operations' section.");
   } else {
       document.editor.textbox.value+="\n" + variable.value + " = np.arange(" + broadcastNumber.value + ")";
+  }
+}
+
+const operation = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (broadcastNumber.value === "") {
+      return alert("Please enter a number in the 'value' field, , in the 'Broadcasting and vectorised operations' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " " + arg + " " + broadcastNumber.value;
   }
 }

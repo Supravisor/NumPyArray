@@ -245,6 +245,8 @@ const statistics = (arg) => {
 }
 
 // Broadcasting and vectorised operations
+let broadcastNumber = document.getElementById("broadcastNumber");
+
 const broadcast = () => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");

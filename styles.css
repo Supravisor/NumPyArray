@@ -72,7 +72,7 @@ td {
   background: #646464;
 }
 
-.btn-success, .btn-data {
+.btn-success, .btn-data, .btn-primary {
   color: white;
 }
 

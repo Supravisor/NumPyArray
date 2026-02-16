@@ -160,6 +160,43 @@
   <input class="btn" name="broadcastNumber" id="broadcastNumber" placeholder="value" type="number" />
 </p>
 
+<hr />
+<h2>Boolean arrays (masks)</h2>
+
+<p>
+  <input type="button" class="btn btn-primary" value=">" onclick="boolean(this.value)" />
+  <input type="button" class="btn btn-primary" value=">=" onclick="boolean(this.value)" />
+  <input type="button" class="btn btn-primary" value="<" onclick="boolean(this.value)" />
+  <input type="button" class="btn btn-primary" value="<=" onclick="boolean(this.value)" />
+  <input type="button" class="btn btn-primary" value="==" onclick="boolean(this.value)" />
+  <input type="button" class="btn btn-primary" value="!=" onclick="boolean(this.value)" />
+</p>
+
+<p>
+  <input type="button" class="btn btn-primary" value="&" onclick="masks(this.value)" />
+  <input type="button" class="btn btn-primary" value="|" onclick="masks(this.value)" />
+</p>
+
+<p>
+  <input class="btn" name="valueA" id="valueA" placeholder="value A" size="10" type="textfield" />
+  <input class="btn" name="valueB" id="valueB" placeholder="value B" size="10" type="textfield" />
+</p>
+
+<p>
+  <input type="button" class="btn btn-primary" value="start True" onclick="truthy('True')" />
+  <input type="button" class="btn btn-primary" value="start False" onclick="truthy('False')" />
+</p>
+
+<p>
+  <input type="button" class="btn btn-primary" value="@ True" onclick="document.editor.textbox.value+=', True'" />
+  <input type="button" class="btn btn-primary" value="@ False" onclick="document.editor.textbox.value+=', False'" />
+</p>
+
+<p>
+  <input type="button" class="btn btn-primary" value="last True" onclick="document.editor.textbox.value+=', True]\n'" />
+  <input type="button" class="btn btn-primary" value="last False" onclick="document.editor.textbox.value+=', False]\n'" />
+</p>
+
             </div>
           </td>
           <td id="textbox">

@@ -266,3 +266,39 @@ const operation = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + " " + arg + " " + broadcastNumber.value;
   }
 }
+
+// Boolean arrays (masks)
+let valueA = document.getElementById("valueA");
+let valueB = document.getElementById("valueB");
+
+const boolean = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (valueA.value === "") {
+      return alert("Please enter a value in the 'value A' field, in the 'Boolean arrays (masks)' section.");
+  } else if (valueB.value === "") {
+      return alert("Please enter a value in the 'value B' field, in the 'Boolean arrays (masks)' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + "[" + valueA.value + " " + arg + " " + valueB.value + "]";
+  }
+}
+
+const masks = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (valueA.value === '') {
+    return alert("Please enter a value in the 'value A' field, in the 'Boolean arrays (masks)' section.");
+  } else if (valueB.value === '') {
+      return alert("Please enter a value in the 'value B' field, in the 'Boolean arrays (masks)' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + "[(" + valueA.value + ") " + arg + " (" + valueB.value + ")]";
+  }
+}
+
+const truthy = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + "[" + arg;
+  }
+}

@@ -269,3 +269,4 @@ const operation = (arg) => {
 
 //Boolean arrays (masks)
 let valueA = document.getElementById("valueA");
+let valueB = document.getElementById("valueB");

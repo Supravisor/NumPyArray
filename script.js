@@ -266,3 +266,6 @@ const operation = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + " " + arg + " " + broadcastNumber.value;
   }
 }
+
+//Boolean arrays (masks)
+let valueA = document.getElementById("valueA");

@@ -272,12 +272,13 @@ let valueA = document.getElementById("valueA");
 let valueB = document.getElementById("valueB");
 
 const boolean = (arg) => {
-  if (valueB.value === "") {
+  if (variable.value === "") {
+    document.editor.textbox.value+= "\nnp.array([" + array.value.replaceAll(regex, ", ").split(",") + "])";
+  } else if (valueA.value === "") {
+      return alert("Please enter a value in the 'value A' field, in the 'Boolean arrays (masks)' section.");
+  } else if (valueB.value === "") {
       return alert("Please enter a value in the 'value B' field, in the 'Boolean arrays (masks)' section.");
   } else {
-      if (valueA.value === '') {
-        valueA.value = variable.value;
-      }
-      document.editor.textbox.value+="\n" + valueA.value + "[" + valueA.value + " " + arg + " " + valueB.value + "]";
+      document.editor.textbox.value+="\n" + variable.value + "[" + valueA.value + " " + arg + " " + valueB.value + "]";
   }
 }

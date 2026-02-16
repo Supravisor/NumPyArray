@@ -294,3 +294,11 @@ const masks = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + "[(" + valueA.value + ") " + arg + " (" + valueB.value + ")]";
   }
 }
+
+const truthy = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + "[" + arg;
+  }
+}

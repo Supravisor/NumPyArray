@@ -273,7 +273,7 @@ let valueB = document.getElementById("valueB");
 
 const boolean = (arg) => {
   if (variable.value === "") {
-    document.editor.textbox.value+= "\nnp.array([" + array.value.replaceAll(regex, ", ").split(",") + "])";
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
   } else if (valueA.value === "") {
       return alert("Please enter a value in the 'value A' field, in the 'Boolean arrays (masks)' section.");
   } else if (valueB.value === "") {

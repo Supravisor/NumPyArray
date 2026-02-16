@@ -267,6 +267,17 @@ const operation = (arg) => {
   }
 }
 
-//Boolean arrays (masks)
+// Boolean arrays (masks)
 let valueA = document.getElementById("valueA");
 let valueB = document.getElementById("valueB");
+
+const boolean = (arg) => {
+  if (valueB.value === "") {
+      return alert("Please enter a value in the 'value B' field, in the 'Boolean arrays (masks)' section.");
+  } else {
+      if (valueA.value === '') {
+        valueA.value = variable.value;
+      }
+      document.editor.textbox.value+="\n" + valueA.value + "[" + valueA.value + " " + arg + " " + valueB.value + "]";
+  }
+}

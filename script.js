@@ -351,6 +351,7 @@ const randomSizeFunc = () => {
 
 // Linear Algebra
 let arrayA = document.getElementById("arrayA");
+let arrayB = document.getElementById("arrayB");
 
 const dotAlgebra = () => {
   if (arrayA.value === '') {

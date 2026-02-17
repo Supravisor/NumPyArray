@@ -81,6 +81,11 @@ td {
   border-color: rgb(70, 30, 255);
 }
 
+.btn-column {
+  background: orange;
+  border-color: darkOrange;
+}
+
 /* input */
 
 input {

@@ -302,3 +302,49 @@ const truthy = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + "[" + arg;
   }
 }
+
+// Random arrays
+let randomValue = document.getElementById("randomValue");
+let randomRow = document.getElementById("randomRow");
+let randomColumn = document.getElementById("randomColumn");
+let randomSize = document.getElementById("randomSize");
+
+const randint = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (randomValue.value === "") {
+      return alert("Please enter a number in the 'random' field, in the 'Random arrays' section.");
+  } else if (randomRow.value === "") {
+      return alert("Please enter a number in the 'row' field, in the 'Random arrays' section.");
+  } else if (randomColumn.value === "") {
+      return alert("Please enter a number in the 'column' field, in the 'Random arrays' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.random.randint(" + randomValue.value + ", size=(" + randomRow.value + ", " + randomColumn.value + "))";
+  }
+}
+
+const randn = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (randomValue.value === "") {
+      return alert("Please enter a number in the 'random' field, in the 'Random arrays' section.");
+  } else if (randomRow.value === "") {
+      return alert("Please enter a number in the 'row' field, in the 'Random arrays' section.");
+  } else if (randomColumn.value === "") {
+      return alert("Please enter a number in the 'column' field, in the 'Random arrays' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.random.randn(" + randomValue.value + ", " + randomRow.value + ", " + randomColumn.value + ")";
+  }
+}
+
+const randomSizeFunc = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (randomValue.value === "") {
+      return alert("Please enter a number in the 'random' field, in the 'Random arrays' section.");
+  } else if (randomSize.value === "") {
+      return alert("Please enter a number in the 'size' field, in the 'Random arrays' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.random.randint(" + randomValue.value + ", size=" + randomSize.value + ")";
+  }
+}

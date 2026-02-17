@@ -335,3 +335,15 @@ const randn = () => {
       document.editor.textbox.value+="\n" + variable.value + " = np.random.randn(" + randomValue.value + ", " + randomRow.value + ", " + randomColumn.value + ")";
   }
 }
+
+const randomSizeFunc = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (randomValue.value === "") {
+      return alert("Please enter a number in the 'random' field, in the 'Random arrays' section.");
+  } else if (randomSize.value === "") {
+      return alert("Please enter a number in the 'size' field, in the 'Random arrays' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.random.randint(" + randomValue.value + ", size=" + randomSize.value + ")";
+  }
+}

@@ -304,6 +304,8 @@ const truthy = (arg) => {
 }
 
 // Random arrays
+let randomValue = document.getElementById("randomValue");
+
 const randint = () => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");

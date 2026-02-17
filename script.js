@@ -348,3 +348,14 @@ const randomSizeFunc = () => {
       document.editor.textbox.value+="\n" + variable.value + " = np.random.randint(" + randomValue.value + ", size=" + randomSize.value + ")";
   }
 }
+
+// Linear Algebra
+const dotAlgebra = () => {
+  if (arrayA.value === '') {
+    return alert("Please enter an array reference in the 'array A' field, in the 'Linear Algebra' section.");
+  } else if (arrayB.value === "") {
+    return alert("Please enter an array reference in the 'array B' field, in the 'Linear Algebra' section.");
+  } else {
+      document.editor.textbox.value+="\n" + arrayA.value + ".dot(" + arrayB.value + ")";
+  }
+}

@@ -307,6 +307,7 @@ const truthy = (arg) => {
 let randomValue = document.getElementById("randomValue");
 let randomRow = document.getElementById("randomRow");
 let randomColumn = document.getElementById("randomColumn");
+let randomSize = document.getElementById("randomSize");
 
 const randint = () => {
   if (variable.value === "") {

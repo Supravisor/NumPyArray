@@ -350,6 +350,8 @@ const randomSizeFunc = () => {
 }
 
 // Linear Algebra
+let arrayA = document.getElementById("arrayA");
+
 const dotAlgebra = () => {
   if (arrayA.value === '') {
     return alert("Please enter an array reference in the 'array A' field, in the 'Linear Algebra' section.");

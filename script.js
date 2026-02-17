@@ -302,3 +302,18 @@ const truthy = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + "[" + arg;
   }
 }
+
+// Random arrays
+const randint = () => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (randomValue.value === "") {
+      return alert("Please enter a number in the 'random' field, in the 'Random arrays' section.");
+  } else if (randomRow.value === "") {
+      return alert("Please enter a number in the 'row' field, in the 'Random arrays' section.");
+  } else if (randomColumn.value === "") {
+      return alert("Please enter a number in the 'column' field, in the 'Random arrays' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.random.randint(" + randomValue.value + ", size=(" + randomRow.value + ", " + randomColumn.value + "))";
+  }
+}

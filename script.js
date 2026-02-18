@@ -362,3 +362,15 @@ const dotAlgebra = () => {
       document.editor.textbox.value+="\n" + arrayA.value + ".dot(" + arrayB.value + ")";
   }
 }
+
+const symbolAlgebra = (arg) => {
+  if (arrayA.value === "") {
+    return alert("Please enter an array reference in the 'array A' field, in the 'Linear Algebra' section.");
+  } else if (arrayB.value == "") {
+    return alert("Please enter an array reference in the 'array B' field, in the 'Linear Algebra' section.");
+  } else if (arg === ".") {
+      document.editor.textbox.value+="\n" + arrayA.value + arg + arrayB.value;
+  } else {
+      document.editor.textbox.value+="\n" + arrayA.value + " " + arg + " " + arrayB.value;
+  }
+}

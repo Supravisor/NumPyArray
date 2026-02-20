@@ -107,6 +107,6 @@ input:not([type:"button"]) {
   border-color: black;
 }
 
-#subIndexMatrix {
+#subIndexMatrix, #objectElements {
   width: 80px;
 }

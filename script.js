@@ -376,6 +376,7 @@ const symbolAlgebra = (arg) => {
 }
 
 // Size of objects in Memory
+let objectElements = document.getElementById("objectElements");
 
 const objectSize = (arg) => {
   if (objectElements.value === "") {

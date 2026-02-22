@@ -374,3 +374,8 @@ const symbolAlgebra = (arg) => {
       document.editor.textbox.value+="\n" + arrayA.value + " " + arg + " " + arrayB.value;
   }
 }
+
+// Size of objects in Memory
+const objectSize = (arg) => {
+  document.editor.textbox.value+="\nnp.dtype(" + arg + ").itemsize";
+}

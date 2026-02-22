@@ -379,9 +379,5 @@ const symbolAlgebra = (arg) => {
 let objectElements = document.getElementById("objectElements");
 
 const objectSize = (arg) => {
-  if (objectElements.value === "") {
-      return alert("Please enter a number in the 'object elements' field, in the 'Size of objects in Memory' section.");
-  } else {
-      document.editor.textbox.value+="\nnp.array([" + objectElements.value + "]).nbytes";
-  }
+  document.editor.textbox.value+="np.dtype(" + arg + ").itemsize";
 }

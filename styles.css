@@ -110,7 +110,3 @@ input:not([type:"button"]) {
 #subIndexMatrix {
   width: 80px;
 }
-
-#objectElements {
-  width: 110px;
-}

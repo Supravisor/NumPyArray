@@ -376,8 +376,6 @@ const symbolAlgebra = (arg) => {
 }
 
 // Size of objects in Memory
-let objectElements = document.getElementById("objectElements");
-
 const objectSize = (arg) => {
-  document.editor.textbox.value+="np.dtype(" + arg + ").itemsize";
+  document.editor.textbox.value+="\nnp.dtype(" + arg + ").itemsize";
 }

@@ -379,3 +379,6 @@ const symbolAlgebra = (arg) => {
 const objectSize = (arg) => {
   document.editor.textbox.value+="\nnp.dtype(" + arg + ").itemsize";
 }
+
+// NumPy functions
+let argA = document.getElementById("argA");

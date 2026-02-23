@@ -382,3 +382,4 @@ const objectSize = (arg) => {
 
 // NumPy functions
 let argA = document.getElementById("argA");
+let argB = document.getElementById("argB");

@@ -384,3 +384,13 @@ const objectSize = (arg) => {
 let argA = document.getElementById("argA");
 let argB = document.getElementById("argB");
 let argC = document.getElementById("argC");
+
+const randomFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else  if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.random." + arg + "(size=" + argA.value+ ")";
+  }
+}

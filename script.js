@@ -478,3 +478,12 @@ const linspaceFunc = (arg) => {
       }
   }
 }
+
+const linspaceFalsy = () => {
+  if (/btn-primary/.test(linspaceFalse.classList)) {
+    linspaceFalse.value = "False";
+  } else {
+      linspaceFalse.value = "True";
+  }
+  linspaceFalse.classList.toggle("btn-primary");
+}

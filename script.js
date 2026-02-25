@@ -394,3 +394,15 @@ const randomFunc = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + " = np.random." + arg + "(size=" + argA.value+ ")";
   }
 }
+
+const randFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.random." + arg + "(" + argA.value + ", " + argB.value + ")";
+  }
+}

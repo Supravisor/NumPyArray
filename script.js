@@ -386,6 +386,7 @@ let argB = document.getElementById("argB");
 let argC = document.getElementById("argC");
 let linspaceFalse = document.getElementById("linspaceFalse");
 
+  //random
 const randomFunc = (arg) => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
@@ -408,6 +409,7 @@ const randFunc = (arg) => {
   }
 }
 
+  // arange
 const arangeFunc = (arg) => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
@@ -448,6 +450,7 @@ const arangeStepFunc = (arg) => {
   }
 }
 
+  // reshape
 const reshapeFunc = (arg) => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
@@ -462,6 +465,7 @@ const reshapeFunc = (arg) => {
   }
 }
 
+  // linspace
 const linspaceFunc = (arg) => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
@@ -487,4 +491,17 @@ const linspaceFalsy = () => {
       linspaceFalse.value = "True";
   }
   linspaceFalse.classList.toggle("btn-primary");
+}
+
+  // zeros
+const zerosFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field.");
+  } else if (argB.value !== "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "((" + argA.value + ", " + argB.value + "))";
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ")";
+  }
 }

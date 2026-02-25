@@ -446,3 +446,17 @@ const arangeStepFunc = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ")" + "[::" + argC.value + "]";
   }
 }
+
+const reshapeFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  } else if (argC.value === "") {
+      return alert("Please enter a number in the 'arg C' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.arange(" + argA.value + ")." + arg + "(" + argB.value + ", " + argC.value + ")";
+  }
+}

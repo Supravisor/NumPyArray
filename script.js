@@ -384,6 +384,7 @@ const objectSize = (arg) => {
 let argA = document.getElementById("argA");
 let argB = document.getElementById("argB");
 let argC = document.getElementById("argC");
+let linspaceFalse = document.getElementById("linspaceFalse");
 
 const randomFunc = (arg) => {
   if (variable.value === "") {

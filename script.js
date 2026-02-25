@@ -406,3 +406,19 @@ const randFunc = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + " = np.random." + arg + "(" + argA.value + ", " + argB.value + ")";
   }
 }
+
+const arangeFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "" && argC.value === "") {
+      return document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ")";
+  } else if (argA.value !== "" && argB.value !== "" && argC.value === "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ")";
+  } else if (argA.value !== "" && argB.value !== "" && argC.value !== "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ", " + argC.value + ")";
+  } else if (argA.value !== "" && argB.value === "" && argC.value !== "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  }
+}

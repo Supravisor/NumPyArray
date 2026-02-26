@@ -517,3 +517,11 @@ const zerosIntFunc = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + " = np.zeros((" + argA.value + ", " + argB.value + "), dtype=np.int)";
   }
 }
+
+const custFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (randomValue.value === "") {
+     document.editor.textbox.value+="\nnp." + arg + "(" + variable.value + ")";
+  }
+}

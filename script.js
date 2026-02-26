@@ -549,3 +549,13 @@ const onesEmptyIntFunc = (arg) => {
       document.editor.textbox.value+="\n" + variable.value + " = np.ones([" + argA.value + "," + argB.value + "], dtype=np." + arg + ")";
   }
 }
+
+const identityFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else  if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ")";
+  }
+}

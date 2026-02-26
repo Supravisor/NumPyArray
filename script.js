@@ -526,6 +526,7 @@ const customFunc = (arg) => {
   }
 }
 
+  // ones
 const onesEmptyFunc = (arg) => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
@@ -550,6 +551,7 @@ const onesEmptyIntFunc = (arg) => {
   }
 }
 
+  // identity
 const identityFunc = (arg) => {
   if (variable.value === "") {
     return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
@@ -557,5 +559,20 @@ const identityFunc = (arg) => {
       return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
   } else {
       document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ")";
+  }
+}
+
+// eye
+const eyeFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  } else if (argC.value === "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ")";
+  } else if (argA.value !== "" && argB.value !== "" && argC.value !== "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ", k=" + argC.value + ")";
   }
 }

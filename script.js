@@ -379,3 +379,200 @@ const symbolAlgebra = (arg) => {
 const objectSize = (arg) => {
   document.editor.textbox.value+="\nnp.dtype(" + arg + ").itemsize";
 }
+
+// NumPy functions
+let argA = document.getElementById("argA");
+let argB = document.getElementById("argB");
+let argC = document.getElementById("argC");
+let linspaceFalse = document.getElementById("linspaceFalse");
+
+  //random
+const randomFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else  if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.random." + arg + "(size=" + argA.value+ ")";
+  }
+}
+
+const randFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.random." + arg + "(" + argA.value + ", " + argB.value + ")";
+  }
+}
+
+  // arange
+const arangeFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "" && argC.value === "") {
+      return document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ")";
+  } else if (argA.value !== "" && argB.value !== "" && argC.value === "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ")";
+  } else if (argA.value !== "" && argB.value !== "" && argC.value !== "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ", " + argC.value + ")";
+  } else if (argA.value !== "" && argB.value === "" && argC.value !== "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  }
+}
+
+const intFunc = (arg1, arg2) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else {
+     document.editor.textbox.value+="\n" + variable.value + " = np." + arg1 + "(" + argA.value + ", dtype=np." + arg2 + ")";
+  }
+}
+
+const arangeStepFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  } else if (argC.value === "") {
+      return alert("Please enter a number in the 'arg C' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ")" + "[::" + argC.value + "]";
+  }
+}
+
+  // reshape
+const reshapeFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  } else if (argC.value === "") {
+      return alert("Please enter a number in the 'arg C' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.arange(" + argA.value + ")." + arg + "(" + argB.value + ", " + argC.value + ")";
+  }
+}
+
+  // linspace
+const linspaceFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  } else if (argC.value === "") {
+      return alert("Please enter a number in the 'arg C' field, in the 'NumPy functions' section.");
+  } else if (argA.value !== "" && argB.value !== "" && argC.value !== "") {
+      if (linspaceFalse.value === "True") {
+        document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ", " + argC.value + ")";
+      } else {
+          document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ", " + argC.value + ", " + linspaceFalse.value + ")";
+      }
+  }
+}
+
+const linspaceFalsy = () => {
+  if (/btn-primary/.test(linspaceFalse.classList)) {
+    linspaceFalse.value = "False";
+  } else {
+      linspaceFalse.value = "True";
+  }
+  linspaceFalse.classList.toggle("btn-primary");
+}
+
+  // zeros
+const zerosFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value !== "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "((" + argA.value + ", " + argB.value + "))";
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ")";
+  }
+}
+
+const zerosIntFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.zeros((" + argA.value + ", " + argB.value + "), dtype=np.int)";
+  }
+}
+
+const customFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (randomValue.value === "") {
+     document.editor.textbox.value+="\nnp." + arg + "(" + variable.value + ")";
+  }
+}
+
+  // ones
+const onesEmptyFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value !== "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "((" + argA.value + ", " + argB.value + "))";
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ")";
+  }
+}
+
+const onesEmptyIntFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np.ones([" + argA.value + "," + argB.value + "], dtype=np." + arg + ")";
+  }
+}
+
+  // identity
+const identityFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else  if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ")";
+  }
+}
+
+// eye
+const eyeFunc = (arg) => {
+  if (variable.value === "") {
+    return alert("Please enter a variable name in the 'variable' field, in the 'Basic NumPy arrays' section.");
+  } else if (argA.value === "") {
+      return alert("Please enter a number in the 'arg A' field, in the 'NumPy functions' section.");
+  } else if (argB.value === "") {
+      return alert("Please enter a number in the 'arg B' field, in the 'NumPy functions' section.");
+  } else if (argC.value === "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ")";
+  } else if (argA.value !== "" && argB.value !== "" && argC.value !== "") {
+      document.editor.textbox.value+="\n" + variable.value + " = np." + arg + "(" + argA.value + ", " + argB.value + ", k=" + argC.value + ")";
+  }
+}
